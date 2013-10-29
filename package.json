@@ -1,8 +1,8 @@
 {
     "author": "Adventize",
     "name": "adventize",
-    "description": "Adventize Server-To-Server SDK",
-    "version": "0.0.3",
+    "description": "Adventize Node.js SDK",
+    "version": "0.0.4",
     "main": "adventize.js",
     "keywords": ["mobile", "advertisement"],
     "repository": {

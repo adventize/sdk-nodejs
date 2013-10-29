@@ -21,7 +21,6 @@ Usage:
             console.log(error);
             return;
         }
-
         // success
         console.log(data);
     });
