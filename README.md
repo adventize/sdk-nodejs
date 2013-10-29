@@ -1,4 +1,4 @@
-# Adventize Node.js SDK
+# Adventize Node.js SDK [![Build Status](https://travis-ci.org/adventize/sdk-nodejs.png?branch=master)](https://travis-ci.org/adventize/sdk-nodejs)
 
 Install from npm:
 
