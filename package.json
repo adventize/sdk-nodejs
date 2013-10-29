@@ -2,9 +2,13 @@
     "author": "Adventize",
     "name": "adventize",
     "description": "Adventize Server-To-Server SDK",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "main": "adventize.js",
     "keywords": ["mobile", "advertisement"],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com:adventize/sdk-nodejs.git"
+    },
     "engines": {
         "node": ">=0.6.9"
     },
