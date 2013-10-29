@@ -8,6 +8,8 @@ var api;
 
 beforeEach(function () {
     api = adventize.createApi({
+        host: "api.adventize.com",
+        port: 80,
         app_id: "1",
         secret_word: "test_secret_word"
     });
@@ -113,6 +115,23 @@ describe('tests adventize server-to-server.', function() {
             });
         });
 
+    });
+
+    it('solve request url', function(done) {
+
+        var expected = "http://api.adventize.com:80/fetch/?open_udid=a8017735ef0aa384313ec66ffbdcbd5a&ip=127.0.0.1&extra1=&os_version=1.0&timestamp=1383065047&app_id=1&secret=c1406b27d4b50145c85d2ea49f332a9e7829bb76";
+
+        var generated = api.getRequestUrl({
+            open_udid: "a8017735ef0aa384313ec66ffbdcbd5a",
+            ip: "127.0.0.1",
+            extra1: null,
+            os_version: "1.0",
+            timestamp: 1383065047
+        });
+
+        generated.should.be.exactly(expected);
+
+        done();
     });
 
 });

@@ -1,14 +1,42 @@
 var request = require('request'),
-    util = require('util');
+    util = require('util'),
+    querystring = require("querystring"),
+    crypto = require("crypto").createHash;
 
 var Adventize = (function() {
 
     var stsApi = function(config) {
-        this.config = config;
+        this.config = util._extend({
+            host: 'api.adventize.com',
+            port: '80',
+            app_id: null,
+            secret_word: null
+        }, config || {});
+    };
+
+    stsApi.prototype.getRequestUrl = function(params) {
+        if (!params.timestamp) {
+            params.timestamp = parseInt(new Date().getTime() / 1000);
+        }
+        params.app_id = this.config.app_id;
+        params.secret = this.generateSignature(params, this.config.secret_word);
+        return 'http://'+ this.config.host +':'+ this.config.port +'/fetch/?'+ querystring.stringify(params);
+    };
+
+    stsApi.prototype.generateSignature = function(params, secretWord) {
+        var hash = [secretWord];
+        params.secret = null;
+        Object.keys(params).sort().forEach(function(key) {
+            var val = params[key];
+            if (val && val.toString().length > 0) {
+                hash.push(key + val);
+            }
+        });
+        return crypto("sha1").update(hash.join("")).digest("hex");
     };
 
     stsApi.prototype.fetch = function(params, callback) {
-        request.get('http://api.adventize.com/fetch/?', function(error, response, body) {
+        request.get(this.getRequestUrl(params), function(error, response, body) {
 
             var status = null,
                 data = null,
@@ -58,8 +86,7 @@ var Adventize = (function() {
             }
 
             if (typeof callback == 'function') {
-                callback(true, "Internal server error. Wrong response from server",
-                    {statusCode: response.statusCode});
+                callback(true, "Internal server error. Wrong response from server");
             }
         });
     };
