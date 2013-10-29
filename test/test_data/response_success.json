@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "offer_id": "1f4d92f4845177c744d0642d763840c92d5949d4f0b192b43af5daed90632948",
+            "bid": 5.35,
+            "name": "Item #1",
+            "offer_description": "Item #1 offer description",
+            "desc": "Item #1 description",
+            "is_stimulated": false,
+            "is_free": true,
+            "currency": "USD",
+            "url": "http://api.adventize.com:80/click/?url=item_1",
+            "icon": "http://icons.adventize.com:80/get/item_1"
+        },
+        {
+            "offer_id": "9f365c2b9e39f230ba7e83bdb976f9eedc5e5cfe26324389cc26450e0379a00d",
+            "bid": 5.04,
+            "name": "Item #2",
+            "offer_description": "Item #2 offer description",
+            "desc": "Item #2 description",
+            "is_stimulated": false,
+            "is_free": false,
+            "currency": "USD",
+            "url": "http://api.adventize.com:80/click/?url=item_2",
+            "icon": "http://icons.adventize.com:80/get/item_2"
+        },
+        {
+            "offer_id": "1eb4a3ab696f0b100cb0157ef0fced558dd09a3d5fc00d3bd333e524c320d4b9",
+            "bid": "4.16",
+            "name": "Item #3",
+            "offer_description": "Item #3 offer description",
+            "desc": "Item #3 description",
+            "is_stimulated": false,
+            "is_free": true,
+            "currency": "USD",
+            "url": "http://api.adventize.com:80/click/?url=item_3",
+            "icon": "http://icons.adventize.com:80/get/item_3"
+        },
+        {
+            "offer_id": "68c4beabfa728053c2049c3028130d693d0dbb2074238782c9737a6a7317aaa3",
+            "bid": "0.31",
+            "name": "Item #4",
+            "offer_description": "Item #4 offer description",
+            "desc": "Item #4 description",
+            "is_stimulated": false,
+            "is_free": true,
+            "currency": "USD",
+            "url": "http://api.adventize.com:80/click/?url=item_4",
+            "icon": "http://icons.adventize.com:80/get/item_4"
+        }
+    ]
+}
