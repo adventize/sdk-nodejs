@@ -2,7 +2,7 @@
     "author": "Adventize",
     "name": "adventize",
     "description": "Adventize Node.js SDK",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "main": "adventize.js",
     "keywords": ["mobile", "advertisement"],
     "repository": {
