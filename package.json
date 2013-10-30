@@ -10,7 +10,7 @@
         "url": "git://github.com:adventize/sdk-nodejs.git"
     },
     "engines": {
-        "node": ">=0.6.9"
+        "node": ">=0.8"
     },
     "dependencies": {
         "request": "~2.27.0"
